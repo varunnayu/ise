@@ -1,0 +1,65 @@
+@import url(styles.css);
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Custom Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8; /* Custom background color */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.faculty {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.faculty h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.faculty-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.faculty-item {
+    width: 300px;
+    margin: 0 20px 40px;
+    padding: 20px;
+    background-color: #fff; /* Custom faculty item background color */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Custom box shadow */
+    transition: transform 0.3s ease;
+}
+
+.faculty-item:hover {
+    transform: translateY(-5px); /* Lifts the item on hover */
+}
+
+.faculty-item img {
+    width: 100%;
+    border-radius: 5%; /* Rounded image */
+    margin-bottom: 20px;
+}
+
+.faculty-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.faculty-item p {
+    font-size: 1.2em;
+    color: #555; /* Custom text color */
+}

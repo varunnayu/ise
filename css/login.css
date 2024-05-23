@@ -1,0 +1,87 @@
+@import url(styles.css);
+/* Login Page styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('UST_Campus_Illustration_Header.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    size: 100%;
+}
+
+.login-container {
+    max-width: 500px;
+    margin: 350px 350px;
+    background-color: #ffffff60;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4c5eaf;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #4565a0;
+}
+.h1{
+    text-align: center;
+    color: white;
+}
+a{
+    color: white;
+}
+/* Media queries for responsiveness */
+@media screen and (max-width: 480px) {
+    .login-container {
+        margin: 55% auto; /* Centering the container vertically and horizontally */
+        background-color: rgba(141, 152, 167, 0.329);
+        padding: 20px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    button {
+        min-width: 70%;
+    }
+    body{
+        background-image: url('mobile.jpg');
+        size: 100%;
+        width: 100%;
+        background-size: cover;
+       }
+    .h1 ,a{
+        color: black;
+
+    }
+}

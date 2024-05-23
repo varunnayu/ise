@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check Fees</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Check Fees</h1>
+    <form class="id-form" action="payfees.html" method="get">
+      <label for="studentId">Student ID:</label>
+      <input type="text" id="studentId" name="studentId" required>
+      <button type="submit" id="checkFeesBtn">Check Fees</button>
+    </form>
+    <div class="fees-info" id="feesInfo">
+        <p id="feePlaceholder"></p>
+      </div>
+    </div>
+
+
+    
+<style>
+  /* Add your CSS styles here */
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.id-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.id-form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.id-form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.id-form button:hover {
+  background-color: #0056b3;
+}
+</style>
+
+
+
+
+
+  
+<script >
+  // Inside the event listener for form submission
+const feePlaceholder = document.getElementById("feePlaceholder");
+feePlaceholder.textContent = `Fee for student ID ${studentId}: $${fee}`;
+document.addEventListener("DOMContentLoaded", function() {
+  const idForm = document.querySelector(".id-form");
+  const feesInfo = document.querySelector("#feesInfo");
+
+  idForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    const studentId = document.querySelector("#studentId").value;
+
+    // Example: Fetch fee information from server based on student ID
+    const fee = getFee(studentId);
+
+    // Update fee information in the HTML
+    const feePlaceholder = document.getElementById("feePlaceholder");
+    feePlaceholder.textContent = `Fee for student ID ${studentId}: $${fee}`;
+
+    // Redirect to payfees.html with the student ID as a query parameter
+    window.location.href = `payfees.html?studentId=${studentId}`;
+  });
+
+  // Example function to fetch fee from server (replace with your actual logic)
+  function getFee(studentId) {
+    // Simulated fee based on student ID
+    if (studentId === "12345") {
+      return 500; // Example fee for student ID 12345
+    } else if (studentId === "67890") {
+      return 700; // Example fee for student ID 67890
+    } else {
+      return "Not found"; // Handle invalid student IDs
+    }
+  }
+});
+
+  </script>
+</body>
+</html>

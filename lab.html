@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Information</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/lab.css">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="logo">
+            <img src="images/ssit.png" alt="College Logo">
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="lab.html">Lab </a></li>
+                <li><a href="#campus-life">Events</a></li>
+            </ul>
+        </nav>
+        <div class="cta">
+            <a href="student.html" class="button">SIS</a>
+        </div>
+    </div>
+</header>
+
+
+
+<div class="gallery-container">
+    <div class="gallery-item" onclick="showInfo('Lab 1', 'This is the description for Image 1.')">
+        <img src="images/lab1.jpg" alt="Image 1">
+    </div>
+    <div class="gallery-item" onclick="showInfo('lab 2', 'This is the description for Image 2.')">
+        <img src="images/lab2.jpg" alt="Image 2">
+    </div>
+    <div class="gallery-item" onclick="showInfo('Lab 3', 'This is the description for Image 3.')">
+        <img src="images/lab3.jpg" alt="Image 3">
+    </div>
+    <div class="gallery-item" onclick="showInfo('Lab 4', 'This is the description for Image 3.')">
+        <img src="images/lab4.jpg" alt="Image 3">
+    </div>
+    <div class="gallery-item" onclick="showInfo('Lab 5', 'This is the description for Image 3.')">
+        <img src="images/lab5.jpg" alt="Image 3">
+    </div>
+</div>
+
+<div id="info-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="info-title"></h2>
+        <p id="info-description"></p>
+        <button class="cancel-btn" onclick="closeModal()">Cancel</button>
+    </div>
+</div>
+
+<script>
+    function showInfo(title, description) {
+    document.getElementById('info-title').innerText = title;
+    document.getElementById('info-description').innerText = description;
+    document.getElementById('info-modal').style.display = 'flex';
+}
+
+function closeModal() {
+    document.getElementById('info-modal').style.display = 'none';
+}
+
+</script>
+
+</body>
+</html>

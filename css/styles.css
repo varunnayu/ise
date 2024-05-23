@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poetsen+One&display=swap');
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Custom Styles */
+body {
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+    background-color: #6170f5da; /* Custom header color */
+    padding: 20px 0;
+}
+
+.logo img {
+    max-width: 55px;
+}
+
+.nav-menu ul {
+    list-style: none;
+}
+
+.nav-menu ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-menu ul li a:hover {
+    color: #ffffff; /* Change color on hover */
+}
+
+.cta .button {
+    padding: 10px 20px;
+    background-color: #ffffff; /* Custom button color */
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+
+.hero h1 {
+  font-size: 48px;
+  margin: 0;
+  text-align: center;
+  padding-top: 400px;
+  padding-bottom: 300px;
+  font-family: Inter;
+}
+
+span{
+  color: #6170f5da;
+}
+
+u{
+  color: #6170f5da;
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+section p {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  letter-spacing: 2.5px;
+  padding-top: 15px;
+}
+
+section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  padding-top: 20px;
+}
+
+.vision {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 50px auto;
+  max-width: 600px;
+}
+
+.vision h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.vision p {
+  color: #555;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.vision:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.mou h1{
+  text-align: center;
+  color: #6170f5da;
+  padding-top: 20px;
+}
+
+
+
+/*chatbot*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+#open-chat-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 9999;
+}
+  
+#chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    z-index: 9998;
+    animation: pop-up 0.5s ease forwards;
+}
+  
+@keyframes pop-up {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .chat-header {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .chat-header h2 {
+    margin: 0;
+  }
+  
+  #close-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: auto;
+  }
+  
+  .chat-messages {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 15px;
+  }
+  
+  .message {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 15px;
+  }
+  
+  .message img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .message p {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 70%;
+  }
+  
+  .user-message {
+    justify-content: flex-start;
+  }
+  
+  .bot-message {
+    justify-content: flex-end;
+  }
+  
+  #user-input {
+    width: calc(100% - 80px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 15px 15px 15px 0;
+  }
+  
+  #send-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 15px 0;
+  }
+
+.mou {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.mou h1 {
+    color: #333;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.mou ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mou ul li {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 5px solid #007bff;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.mou ul li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Styling for Program Educational Objectives (PEOs) */
+.col-md-12 {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+h4 {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+
+/* Custom styling for each PEO */
+
+
+li:nth-child(even):before {
+  color: #28a745;
+}
+
+li:nth-child(3n):before {
+  color: #ffc107;
+}
+
+li:nth-child(4n):before {
+  color: #dc3545;
+}
+
+
+/* Styling for Program Outcomes (POs) and Program Specific Outcomes (PSOs) */
+.col-md-12 {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.col-md-12 h4 {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.col-md-12 p {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.col-md-12 ul {
+  padding-left: 20px;
+}
+
+.col-md-12 li {
+  font-size: 18px;
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 20px;
+}
+
+
+
+
+
+/* Footer styling */
+.footer {
+  background-color: #6170f5da;
+  padding: 50px 0;
+  text-align: center;
+  color: white;
+}

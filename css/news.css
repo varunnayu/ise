@@ -1,0 +1,40 @@
+@import url(styles.css);
+
+.news-container {
+    padding: 20px;
+    width: 90%;
+    margin: auto;
+}
+
+.news-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.news-table th,
+.news-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.news-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.news-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.news-table tr:hover {
+    background-color: #ddd;
+}
+
+.news-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #7684ffc4;
+    color: white;
+}

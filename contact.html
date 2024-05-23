@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+	<div class="container">
+		<form method="post" action="https://script.google.com/macros/s/AKfycbyBCvyTtdXpBJLwLxig656WiP7AL6tUBR1qFoHFK7M1/dev" name="contact-form">
+			<h4>Contact Us</h4>
+			<input type="text" name="your-name" placeholder="Name">
+			<input type="text" name="your-number" placeholder="Number">
+			<input type="email" name="your-email" placeholder="Email">
+			<textarea name="message" rows="7" placeholder="Your Message"></textarea>
+			<input type="submit" value="Submit" id="submit">
+		</form>
+	</div>
+
+	<script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyBCvyTtdXpBJLwLxig656WiP7AL6tUBR1qFoHFK7M1/dev'
+
+const form = document.forms['contact-form']
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+  .then(response => alert("Thank you! your form is submitted successfully." ))
+  .then(() => { window.location.reload(); })
+  .catch(error => console.error('Error!', error.message))
+})
+    </script>
+</body>
+</html>
